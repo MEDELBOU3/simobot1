@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chat Bot</title>
+   <link rel="icon" type="image/svg"  href="hello.png">
+   <link rel="stylesheet" href="style.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+<div class="container" id="chat-container">
+     <button id="mode-switch" ><i class='bx bx-brightness-half bx-tada' undefined ></i></button>
+          <h2>Simo.Chat-Bot</h2>
+          <img src="bot.jpeg" class="image-1" alt="bot">
+          <p>Internet services are essential for selling subscriptions to popular platforms like Netflix and Canva, enabling seamless access to their vast content libraries and design tools. Additionally, social media platforms such as Facebook, Instagram, and Twitter heavily rely on internet services to connect users worldwide, facilitate communication, and support businesses in reaching their target audience through targeted advertising and engaging content creation</p>
+      <div id="chat-messages" class="messages"></div>
+  <script>
+   
+        // الحصول على الـ body والـ container
+       var body = document.body;
+       var container = document.querySelector('.container');
+       var question= document.querySelector('.question');
+       // الحصول على الزر الذي سيتم استخدامه للتبديل بين الأوضاع
+       var modeSwitch = document.querySelector('#mode-switch');
+
+       // إضافة مستمع الحدث للزر
+       modeSwitch.addEventListener('click', function() {
+       // تبديل الأوضاع
+    if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        container.classList.remove('light-mode');
+        container.classList.add('dark-mode');
+        question.classList.remove('light-mode');
+        question.classList.add('dark-mode');
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        container.classList.remove('dark-mode');
+        container.classList.add('light-mode');
+        question.classList.remove('dark-mode');
+        question.classList.add('light-mode');
+      }
+    });
+
+       
+  </script>
+
+      <div class="input-container">
+        <input id="user-input" type="text" placeholder="Type hi...">
+        <button id="send-button"><i class='bx bxs-send' ></i></button>
+      </div>
+
+      <script>
+        // الحصول على المدخلات والزر
+        var input = document.getElementById("user-input");
+        var button = document.getElementById("send-button");
+        
+        // إضافة مستمع الأحداث للمدخلات
+        input.addEventListener("keyup", function(event) {
+          // رقم 13 هو الرمز الرئيسي لزر "Enter"
+          if (event.keyCode === 13) {
+            // منع الأحداث الافتراضية
+            event.preventDefault();
+            // تحفيز النقر على الزر "إرسال"
+            button.click();
+          }
+        });
+        </script>
+        
+      <img class="delayed-image" src="placeholder.jpg" alt="Delayed Image">
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<!-- استيراد مكتبة natural عبر CDN -->
+<script src="https://cdn.jsdelivr.net/npm/prosody.js@0.12.0/dist/prosody.min.js"></script>
+
+</body>
+</html>

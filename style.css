@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #8de7acec;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+}
+body::-webkit-scrollbar {
+  width: 10px; /* عرض الـ scrollbar */
+  height: 30px;
+}
+
+/* تعديل المقبض (الجزء الذي يتم سحبه) */
+body::-webkit-scrollbar-thumb {
+  background: #888; /* لون المقبض */
+  border-radius: 5px; /* تقريب الزوايا */
+}
+
+/* تغيير لون المقبض عند التمرير */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+.container {
+  position: relative;
+  overflow: auto;
+  height: auto;
+  width: 1000px;
+  margin: 200px auto;
+  z-index: 50;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #8de7acec;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.449);
+}
+
+body.light-mode {
+  background-color: #8de7acec;
+  color: #000;
+}
+
+.container.light-mode {
+  background-color: #8de7acec;
+  color: #000;
+}
+
+/* أنماط وضع الليل */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.container.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+.question.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+.question.light-mode {
+  background-color: #8de7acec;
+  color: #000;
+}
+/* تخصيص الـ scrollbar */
+body::-webkit-scrollbar, .container::-webkit-scrollbar {
+  width: 10px; /* عرض الـ scrollbar */
+}
+
+/* تعديل المقبض (الجزء الذي يتم سحبه) */
+body::-webkit-scrollbar-thumb, .container::-webkit-scrollbar-thumb {
+  background: #888; /* لون المقبض */
+  border-radius: 5px; /* تقريب الزوايا */
+}
+
+/* تغيير لون المقبض عند التمرير */
+body::-webkit-scrollbar-thumb:hover, .container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #333; /* الخلفية الداكنة في حالة الوضع المفضل للون */
+      color: #fff; /* النص الأبيض في حالة الوضع المفضل للون */
+  }
+
+  .container {
+      background-color: #333; /* خلفية الحاوية الداكنة في حالة الوضع المفضل للون */
+  }
+}
+
+
+
+#mode-switch {
+  padding: 10px 10px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: 3px solid rgb(140, 140, 140);
+  box-shadow: 0 0 20px rgb(128, 128, 128);
+  margin-top: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+
+#mode-switch:active{
+  transform: scale(0.95);
+  box-shadow: 0 0 20px #00eeff;
+}
+.container .bx{
+  font-size: 30px;
+  color: rgb(140, 140, 140);
+}
+
+.container h2 {
+  font-size: 60px;
+  background: linear-gradient(to left, #ff6464 50%,  rgb(0, 187, 255)100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-left: 160px;
+  font-family: "Open Sans", sans-serif;
+ }
+
+
+.image-1 {
+  width: 45%;
+  height: 45%;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 21, 60);
+  box-shadow:
+              0 0 20px rgb(255, 21, 60),
+              0 0 40px rgb(255, 25, 105),
+              0 0 60px rgb(255, 54, 118),
+              0 0 80px rgb(251, 62, 122),
+              0 0 100px rgb(255, 93, 144);
+  margin-top: 150px;
+}
+   
+.container p {
+    font-size: 19px;
+    justify-content: center;
+    background: linear-gradient(to left, #ff6464, #9f7ad4, rgb(0, 187, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top: 200px;
+    margin-left: 50px;
+    font-family: "Open Sans", sans-serif;
+ } 
+.messages {
+    position: relative;
+    height: auto;
+    overflow-x: auto;
+    margin-top: 40px;
+    margin: 10px 20px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+  
+  .message {
+    margin: 10px;
+    padding: 10px;
+    margin-top: 80px;
+    clear: both;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .user-message {
+    background-color: #3dbbd46f;
+    border: 2px solid aqua;
+    padding: 10px;
+    margin-right: auto;
+    margin: 0 auto;
+    max-width: 60%;
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    font-family: arial;
+   
+}
+
+.bot-message {
+    background-color: #45454556;
+    border: 2px solid rgb(170, 255, 0);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    margin-left: auto;
+    max-width: 88%;
+    float: left;
+    margin-top: 10px;
+    margin-left: auto;
+    font-family: arial;
+    font-size: 18px;
+}
+.user-message + .bot-message{
+  margin: 20px;
+  padding-top: 10px;
+}
+
+.message.single-message {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+
+  
+  .input-container {
+    margin-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 20px;
+    background: transparent;
+    outline: none;
+    border:1px solid pink;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 10px rgb(128, 128, 128);
+  }
+  input[type="text"]:hover {
+    box-shadow: 0 0 20px  rgb(255, 127, 127);
+  }
+#send-button {
+    padding:  15px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid pink;
+    text-align: center;
+    border-right: 1px solid rgba(128, 128, 128, 0.647);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgb(128, 128, 128);
+}
+#send-button i {
+  color: pink;
+  font-size: 25px;
+}
+#send-button:hover{
+  box-shadow: 2px 0 10px rgb(255, 127, 127),
+              2px  0 15px rgb(255, 124, 124);
+}
+
+
+.question {
+  background-color: #465e3497;
+  color: #fff;
+  border: 3px solid salmon;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(255, 21, 60);
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+.question:hover {
+  background: linear-gradient(138deg, #722ef9, #ff6464);
+  border: 3px solid #c973ff86;
+  transform: translateX(10px);
+  box-shadow: 0 0 10px #00eeff;
+}
+
+.delayed-image {
+    opacity: 0;
+    margin-left: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 450px;
+    max-height: 400px; /* تعديل ارتفاع الصورة ليكون متناسبًا مع العرض */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(112, 112, 112);
+    transition: opacity 0.5s ease-in-out;
+    animation: wave  1s infinite; 
+    clear: both;
+}
+
+.show-image {
+    opacity: 1; 
+    clear: both;
+}
+
+
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
